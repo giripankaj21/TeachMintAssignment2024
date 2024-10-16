@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -50,20 +51,36 @@ android {
 }
 
 dependencies {
+    implementation("androidx.compose.ui:ui:1.3.1") // UI
+    implementation("androidx.compose.material3:material3:1.0.1") // Material Design Components
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.1") // Preview tool
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.activity:activity-compose:1.7.0") // Compose support for Activity
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2") // ViewModel
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2") // LiveData
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0") // Coroutines core
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0") // Coroutines for Android
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Retrofit
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Gson converter for Retrofit
+
+    implementation("androidx.room:room-ktx:2.5.0") // Room extensions for Kotlin
+    implementation("androidx.room:room-runtime:2.5.0")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.runtime.livedata) // Room runtime
+    kapt("androidx.room:room-compiler:2.5.0") // Room compiler
+
+    implementation("androidx.webkit:webkit:1.4.0") // WebView support
+
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.compose.ui:ui:1.5.1")
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation("androidx.activity:activity-compose:1.8.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2") // Add this line
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
