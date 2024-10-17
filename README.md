@@ -10,6 +10,7 @@ A simple Android app built with Jetpack Compose that displays repository details
 
 ## Screenshots
 
+![Output](https://github.com/user-attachments/assets/20d17286-5531-4cfe-ae1a-3fb651b2b38f)
 
 
 ## Getting Started
