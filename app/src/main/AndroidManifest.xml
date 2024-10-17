@@ -13,8 +13,9 @@
         android:theme="@style/Theme.TeachMintAssignment"
         tools:targetApi="31" >
         <activity
-            android:name=".RepoDetailActivity"
-            android:exported="false" />
+            android:name=".RepoDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
