@@ -71,7 +71,11 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
-    implementation(libs.androidx.runtime.livedata) // Room runtime
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.monitor)
+    implementation(libs.androidx.junit.ktx)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.testng) // Room runtime
     kapt("androidx.room:room-compiler:2.5.0") // Room compiler
 
     implementation("androidx.webkit:webkit:1.4.0") // WebView support
