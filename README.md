@@ -25,4 +25,4 @@ A simple Android app built with Jetpack Compose that displays repository details
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/RepositoryDetailsApp.git
+   git clone https://github.com/giripankaj21/TeachMintAssignment2024.git
